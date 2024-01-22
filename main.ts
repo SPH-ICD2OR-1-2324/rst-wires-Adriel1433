@@ -193,18 +193,18 @@ function _6wire () {
         } else if (value == 1) {
             whiteCount += 1
         }
-        if (SerialNumber % 2 == 1) {
-            Serial_Number_odd = true
-        }
-        if (yellowCount == 0 && Serial_Number_odd == true) {
-            game.splash("Cut the third wire")
-        } else if (yellowCount == 1 && whiteCount > 1) {
-            game.splash("Cut the fourth wire")
-        } else if (redCount == 0) {
-            game.splash("Cut last wire")
-        } else {
-            game.splash("Cut the fourth wire")
-        }
+    }
+    if (SerialNumber % 2 == 1) {
+        Serial_Number_odd = true
+    }
+    if (yellowCount == 0 && Serial_Number_odd == true) {
+        game.splash("Cut the third wire")
+    } else if (yellowCount == 1 && whiteCount > 1) {
+        game.splash("Cut the fourth wire")
+    } else if (redCount == 0) {
+        game.splash("Cut last wire")
+    } else {
+        game.splash("Cut the fourth wire")
     }
 }
 function _3wire () {
